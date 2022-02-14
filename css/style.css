@@ -1,9 +1,219 @@
 /****************************************************/
 /* Fichier CSS Projet-02 OpenClassrooms BOOKI       */
+/*                                                  */
+/* 14/02/2022                                       */
 /****************************************************/
-
-
-/*  elements de base */
+/*                                                  */
+/*     Média Queries                                */
+/*                                                  */
+/****************************************************/
+/*********** header mode ecran > 992px  *************/
+.flex-container-header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0;
+}
+/*** Header mode tablette ecran entrre 768px et 992px **/
+@media screen and (max-width: 992px) {
+.flex-container-header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    margin: 0;
+}
+}
+/*********** Header mode mobile < 768px **********/
+@media screen and (max-width: 768px) {
+.flex-container-header {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 0;
+}
+}
+/**********************************************************/
+/****** Navigation  menu version PC écran largeur > 992px */
+.navigation a:hover {
+    color: #0065fc;
+    border-top: 3px solid #0065fc;
+}
+/****** Navigation  menu version tablette écran largeur entre 768px et 992px */
+@media screen and (max-width: 992px) {
+.navigation a:hover {
+    color: #deebff;
+    border-top: 3px solid #0065fc;
+    border-bottom: 3px solid #0065fc;
+}
+}
+/*******  Navigation menu version mobile écran largeur < 768px */
+@media screen and (max-width: 768px) {
+.navigation a:hover {
+    color: #0065fc;
+    border-top: 3px solid white;
+    border-bottom: 3px solid #0065fc;
+}
+}
+/**********************************************************/
+/** En mode mobile affichage bouton rechercher disparait pour la loupe   ****/
+@media screen and (min-width: 768px) {
+.bloc-loupe {
+    display: none;
+}
+}
+@media screen and (max-width: 768px) {
+.bloc-rechercher {
+    display: none;
+}
+}
+/***********************************************************************/
+/*****  Disposition des filtres en mode grand écran et tablettes *******/
+.flex-container-filtres {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    margin: 15px 0 0 0;
+    text-align: left;
+}
+.filtres {
+    width: auto;   
+    height: 66px;
+    font-weight: bold;
+    padding: 0;
+    margin: 12px 0 12px 40px;
+    border: 3px solid #f2f2f2;
+    border-radius: 40px;
+}
+/*****  Disposition des filtres en mode mobile *******/
+@media screen and (max-width: 768px) {
+.flex-container-filtres {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.filtres {
+    margin: 12px 45px 12px 0;
+}
+}
+/***********************************************************************************/
+/********* bloc hebergements à Marseille version écran > 992px *********************/
+.flex-container-hebergements-populaires {
+	display: flex;
+	flex-flow: row wrap;
+}
+.hebergements-marseille {
+	order: 1;
+	color: black;
+	flex: 60%;
+	margin: 10px;
+	text-align: center;
+	line-height: 75px;
+	font-size: 30px;
+	background-color: #f2f2f2;
+    border-radius: 15px;
+}
+.cartes-hebergements-marseille {
+	display: flex;
+	flex-flow: row wrap;
+    background-color: #f2f2f2;
+}
+.polaroid-hebergements-marseille {
+    width: 30%;
+    background-color: white;
+    border: 5px solid transparent;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 7px 10px 10px 10px;
+}
+.les-plus-populaires {
+	order: 2;
+	color: black;
+	flex: 32%;
+	margin: 10px;
+	background-color:#f2f2f2;
+    border-radius: 15px;
+}
+/* bloc hebergement à Marseille version tablette écran largeur entre 768px et 992px */
+@media screen and (max-width: 992px){
+.flex-container-hebergements-populaires {
+    display: flex;
+    flex-flow: column wrap;
+}   
+.hebergements-marseille {
+    order: 2;
+}
+.cartes-hebergements-marseille {
+    display: flex;
+    flex-flow: column wrap;	
+}
+.polaroid-hebergements-marseille {
+    width: 95%;	
+}
+.les-plus-populaires {
+    order: 1;
+}
+}
+/* bloc hebergements à Marseille version mobile écran largeur inferieure à 768px */
+@media screen and (max-width: 768px){
+.flex-container-hebergements-populaires {
+    display: flex;
+    flex-flow: column wrap;
+}
+.hebergements-marseille {
+    order: 2;
+}
+.cartes-hebergements-marseille {
+    display: flex;
+    flex-flow: column wrap;	
+}
+.les-plus-populaires {
+    order: 1;
+}
+}
+/*************************************************/
+/************ Activitées à Marseille   ***********/
+/* Création de 4 colonnes de même largeur */
+.colonne {
+	flex: 25%;
+	max-width: 25%;
+	padding: 0 15px;
+}
+/* Mode tablette  - 2 colonnes */
+@media screen and (max-width: 992px) {
+.colonne {
+    flex: 50%;
+    max-width: 50%;
+}
+}
+/* Mode mobile une colonnes */
+@media screen and (max-width: 768px) {
+.colonne {
+    flex: 100%;
+    max-width: 100%;
+}
+}
+/************************************************/
+/*** Footer mode 3 colonnes pour les écrans > 768px *****/
+.flex-container-footer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2f2f2;  
+}
+/* Footer Mode mobile une colonnes */
+@media screen and (max-width: 768px) {
+.flex-container-footer {
+    flex-flow: column wrap;
+    align-items: start;
+}
+}
+/****** fin des Médias Queries   ********************/
+/****************************************************/
+/*  elements de base                                */
 /****************************************************/
 /* 1 box-sizing est appliqué à tous les éléments    */
 /****************************************************/
@@ -16,14 +226,17 @@ body {
 }
 h1 {
     font-size: 145%;
-    margin: 12px 0 0 45px;
+    font-weight: bold;
+    margin: 12px 0 0 25px;
 }
 h2 {
     font-size: 90%;
+    font-weight: bold;
     margin: 20px 0 0 25px;
 }
 h3 {
     font-size: 85%;
+    font-weight: bold;
     margin-left: 25px;
 }
 h4 {
@@ -45,42 +258,20 @@ a {
     text-decoration: none;
     color: black;
 }
+a:hover {
+    color:#0065fc;
+}
 img {
     width: 100%;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 /*************************/
 /* elements de l'en-tête */
 /*************************/
-
-/*********** mode ecran > 992px  **********/
-.flex-container-header {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    margin: 0;
-}
-/*********** mode tablette  ecran entrre 768px et 992px **********/
-@media screen and (max-width: 992px) {
-.flex-container-header {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-content: center;
-    align-items: center;
-    margin: 0;
-}
-}
-/*********** mode mobile < 768px **********/
-@media screen and (max-width: 768px) {
-.flex-container-header {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    margin: 0;
-}
-}
 /* Logo BOOKI */
 #logo {
     width: 191px;
@@ -90,7 +281,6 @@ img {
 .dimention-logo {
     width: 65%;
 }
-
 /* navigation */
 .navigation {
     display: flex;
@@ -107,26 +297,6 @@ img {
     border-top: 3px solid white;
     border-bottom: 3px solid white;
 }
-.navigation a:hover {
-    color: #0065fc;
-    border-top: 3px solid #0065fc;
-}
-/* menu version tablette écran largeur entre 768px et 992px */
-@media screen and (max-width: 992px) {
-.navigation a:hover {
-    color: #deebff;
-    border-top: 3px solid #0065fc;
-    border-bottom: 3px solid #0065fc;
-}
-}
-/* menu version mobil écran largeur inferieure à 768px */
-@media screen and (max-width: 768px) {
-.navigation a:hover {
-    color: #0065fc;
-    border-top: 3px solid white;
-    border-bottom: 3px solid #0065fc;
-}
-}
 /* section selections*/
 /* rechercher une ville */
 /* 1 icon + champ de saisie + bouton Rechercher */
@@ -138,7 +308,7 @@ img {
     justify-content: start;
     align-content: flex-start;
     align-items: center;
-    margin: 25px 0 0 40px;
+    margin: 25px 0 0 25px;
     padding: 0;
 }
 .icon-map-marker {
@@ -166,9 +336,9 @@ img {
     border: 1px solid #f2f2f2;
 }
 .deco-rechercher {
-    width: 80px;
+    width: 110px;
     height: 45px;
-    font-size: 70%;
+    font-size: 100%;
     color:white;
     background-color: #0065fc;
     margin: 0;
@@ -179,7 +349,7 @@ img {
     border-style: none; 
 }
 .deco-loupe {
-    width: 80px;
+    width: 70px;
     height: 45px;
     font-size: 70%;
     color:white;
@@ -191,50 +361,11 @@ img {
     border-width: 0px;
     border-style: none; 
 }
-/** mode mobile affichage bouton rechercher disparait pour la loupe   ****/
-@media screen and (max-width: 768px) {
-.bloc-rechercher {
-    display: none;
-}
-}
-@media screen and (min-width: 768px) {
-.bloc-loupe {
-    display: none;
-}
-}
 /* choix des filters */
-.flex-container-filtres {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: start;
-    margin: 15px 0 0 0;
-    text-align: left;
-}
-@media screen and (max-width: 768px) {
-.flex-container-filtres {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: start;
-}
-}
-@media screen and (max-width: 768px) {
-.filtres {
-    margin: 12px 45px 12px 0;
-}
-}
 .titre-filtres {
     font-weight: bold;
     margin: 35px 20px 0 45px;
     padding: 0;
-}
-.filtres {
-    width: auto;   
-    height: 66px;
-    font-weight: bold;
-    padding: 0;
-    margin: 12px 0 12px 40px;
-    border: 3px solid #f2f2f2;
-    border-radius: 40px;
 }
 .ecoplusfam {
     display: flex;
@@ -243,22 +374,24 @@ img {
 .eco {
     font-size: 110%;
     font-weight: bold;
-    width: 300px;
+    margin: 20px;
 }
 .fam{
     font-size: 110%;
     font-weight: bold;
-    width: 280px;
+    margin: 20px;
 }
 .rom {
+    width: 230px;
     font-size: 110%;
     font-weight: bold;
-    width: 300px;
+    margin: 20px;
 }
 .ani{
+    width: 295px;  
     font-size: 110%;
     font-weight: bold;
-    width: 380px;
+    margin: 20px;
 }
 .filtres:hover {
     background-color: #0065fc;
@@ -269,8 +402,8 @@ img {
     height: 61px;
     color:#0065fc;
     background-color: #deebff;
-    margin: 0 15px 0 0;
-    padding: 14px 5px 12px 5px;
+    margin: 0;
+    padding: 17px 7px 12px 5px;
     border-radius: 50%;
     text-align: center;
 }
@@ -283,13 +416,10 @@ img {
     margin: 5px 5px 10px 65px;
     padding: 7px 5px 5px 12px;
 }
-/* Section Hébergements à Marseille + Les plus populaires */
-.flex-container-hebergements-populaires {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: start;
+.disponibles {
+    font-size: 100%;
 }
+/* Section Hébergements à Marseille + Les plus populaires */
 /* Hébergements à Marseille */
 #hebergements-marseille {
     width: 60%;
@@ -298,19 +428,6 @@ img {
     border-radius: 10px;
     background-color: #f2f2f2;
 }
-
-.cartes-hebergements-marseille {
-	display:flex;
-	flex-flow: row wrap;
-    background-color: #f2f2f2;
-}
-/* menu version mobil écran largeur inferieure à 768px */
-@media screen and (max-width: 768px) {
-.cartes-hebergements-marseille {
-    display: flex;
-    flex-flow: column wrap;	
-}
-}
 .titre {
     font-size: 20px;	
 	font-weight: bold;
@@ -318,36 +435,10 @@ img {
     text-align: left;
     margin: 10px 0 10px 25px;
 }
-.flex-container-marseille {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-}
-.flex-container-marseille > div {
-    width: 270px;
-    height: 270px;
-    margin: 15px;
-}
-
-.polaroid-hebergements-marseille {
-    width: 30%;
-    background-color: white;
-    border: 5px solid transparent;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 7px 10px 10px 10px;
-}
-/* menu version mobil écran largeur inferieure à 992px */
-@media screen and (max-width: 992px) {
-.polaroid-hebergements-marseille {
-    width: 95%;	
-}
-}
 .photo-hm {
     height: 60%;
-    border-radius: 10px 10px 0 0;    
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;    
 }
 .legend-photo {
     font-size: 12px;
@@ -362,56 +453,13 @@ img {
     margin-left: 15px;
 	line-height: 20px;
 }
-.flex-container-hebergements-populaires {
-	display: flex;
-	flex-flow: row wrap;
+.etoile-bleue {
+    color: #0065fc;
+    font-size: 12px;
 }
-.hebergements-marseille {
-	order: 1;
-	color: black;
-	flex: 60%;
-	margin: 10px;
-	text-align: center;
-	line-height: 75px;
-	font-size: 30px;
-	background-color: #f2f2f2;
-    border-radius: 15px;
-}
-.les-plus-populaires {
-	order:2;
-	color: black;
-	flex: 32%;
-	margin: 10px;
-	background-color:#f2f2f2;
-    border-radius: 15px;
-}
-@media screen and (max-width:992px){
-.hebergements-marseille {
-	order: 2;
-}
-.les-plus-populaires {
-	order: 1;
-}
-.flex-container-hebergements-populaires {
-	display: flex;
-	flex-flow: column wrap;
-}
-.cartes-hebergements-marseille {
-    display: flex;
-    flex-flow: row wrap;	
-}
-}
-@media screen and (max-width:768px){
-.hebergements-marseille {
-	order: 2;
-}
-.les-plus-populaires {
-	order: 1;
-}
-.flex-container-hebergements-populaires {
-	display: flex;
-	flex-flow: column wrap;
-}
+.etoile-grise {
+    color:#f2f2f2;
+    font-size: 12px;
 }
 /* Les plus populaires */
 #les-plus-populaires-fond {
@@ -461,7 +509,8 @@ img {
 .photo-pop2 {
     width: 90%;
     height: 100%;
-    border-radius: 10px 0 0 10px;    
+    border-radius: 10px 0 0 10px;
+    object-fit: cover;    
 }
 .boite-pop2 {
     width: 53%;
@@ -525,26 +574,6 @@ img {
 	flex-wrap: wrap;
 	padding: 0 4px;
 }
-/* Création de 4 colonnes de même largeur */
-.colonne {
-	flex: 25%;
-	max-width: 25%;
-	padding: 0 15px;
-}
-/* Mode tablette  - 2 colonnes */
-@media screen and (max-width: 992px) {
- .colonne {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-/* Mode mobile une colonnes */
-@media screen and (max-width: 768px) {
- .colonne {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
 .polaroid-activites-s {
 	height: 37%;
 	margin-top: 15px;
@@ -571,37 +600,27 @@ img {
 }
 .photo-activites-s {
 	height: 80%;
+    object-fit: cover;   
     border-radius: 10px 10px 0 0;  
 }
 .photo-activites-m {
 	height: 84%;
+    object-fit: cover;   
     border-radius: 10px 10px 0 0;   
 }
 .photo-activites-l {
 	height: 87%;
+    object-fit: cover;   
     border-radius: 10px 10px 0 0;   
 }
 .photo-activites-xl {
 	height: 88%;
+    object-fit: cover;   
     border-radius: 10px 10px 0 0; 
 }
 /**********/
 /* Footer */
 /**********/
-.flex-container-footer {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #f2f2f2;  
-}
-/* Mode mobile une colonnes */
-@media screen and (max-width: 768px) {
- .flex-container-footer {
-    flex-flow: column wrap;
-	align-items: start;
-  }
-}
 .flex-container-footer > div {
 	width: 280px;
 	height: 200px;
@@ -609,3 +628,7 @@ img {
     padding: 0;
     text-align: left;
 }
+.lien-footer:hover {
+    color:#0065fc;
+}
+/***** fin du CSS *****/
