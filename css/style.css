@@ -1,7 +1,7 @@
 /****************************************************/
 /* Fichier CSS Projet-02 OpenClassrooms BOOKI       */
 /*                                                  */
-/* 14/02/2022                                       */
+/* 21/02/2022                                       */
 /****************************************************/
 /*                                                  */
 /*     Média Queries                                */
@@ -80,11 +80,13 @@
     text-align: left;
 }
 .filtres {
-    width: auto;   
-    height: 66px;
+    min-width: fit-content;
+    height: 51px;
     font-weight: bold;
+    font-size: 100%;
     padding: 0;
-    margin: 12px 0 12px 40px;
+    margin: 12px 0 12px 25px;
+    cursor: pointer;
     border: 3px solid #f2f2f2;
     border-radius: 40px;
 }
@@ -95,7 +97,7 @@
     flex-flow: column nowrap;
 }
 .filtres {
-    margin: 12px 45px 12px 0;
+    margin: 12px 45px 12px 25px;
 }
 }
 /***********************************************************************************/
@@ -105,14 +107,24 @@
 	flex-flow: row wrap;
 }
 .hebergements-marseille {
+    width: 58%;
 	order: 1;
 	color: black;
 	flex: 60%;
-	margin: 10px;
+	margin: 25px;
 	text-align: center;
 	line-height: 75px;
 	font-size: 30px;
 	background-color: #f2f2f2;
+    border-radius: 15px;
+}
+.les-plus-populaires {
+    width: 20%;
+	order: 2;
+	color: black;
+	flex: 32%;
+	margin: 25px;
+	background-color:#f2f2f2;
     border-radius: 15px;
 }
 .cartes-hebergements-marseille {
@@ -121,20 +133,13 @@
     background-color: #f2f2f2;
 }
 .polaroid-hebergements-marseille {
-    width: 30%;
+    width: 28%;
+    height: 260px;
     background-color: white;
     border: 5px solid transparent;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 7px 10px 10px 10px;
-}
-.les-plus-populaires {
-	order: 2;
-	color: black;
-	flex: 32%;
-	margin: 10px;
-	background-color:#f2f2f2;
-    border-radius: 15px;
+    margin: 28px;
 }
 /* bloc hebergement à Marseille version tablette écran largeur entre 768px et 992px */
 @media screen and (max-width: 992px){
@@ -144,16 +149,21 @@
 }   
 .hebergements-marseille {
     order: 2;
+    width: 95%;
+	margin: 25px;
+}
+.les-plus-populaires {
+    order: 1;
+    width: 95%;
+	margin: 25px;
 }
 .cartes-hebergements-marseille {
     display: flex;
     flex-flow: column wrap;	
 }
 .polaroid-hebergements-marseille {
-    width: 95%;	
-}
-.les-plus-populaires {
-    order: 1;
+    width: 90%;
+    height: 280px;
 }
 }
 /* bloc hebergements à Marseille version mobile écran largeur inferieure à 768px */
@@ -168,6 +178,9 @@
 .cartes-hebergements-marseille {
     display: flex;
     flex-flow: column wrap;	
+}
+.polaroid-hebergements-marseille {
+    width: 90%;	
 }
 .les-plus-populaires {
     order: 1;
@@ -364,46 +377,38 @@ ul {
 /* choix des filters */
 .titre-filtres {
     font-weight: bold;
-    margin: 35px 20px 0 45px;
+    margin: 30px 0 0 25px;
     padding: 0;
 }
 .ecoplusfam {
     display: flex;
     flex-flow: row nowrap;
 }
-.eco {
-    font-size: 110%;
-    font-weight: bold;
-    margin: 20px;
+.txt-flt {
+    font-size: 100%;
+    margin: 20px 25px 20px 12px;
 }
-.fam{
-    font-size: 110%;
-    font-weight: bold;
-    margin: 20px;
+.dim-romantique {
+    width: 185px;
 }
-.rom {
-    width: 230px;
-    font-size: 110%;
-    font-weight: bold;
-    margin: 20px;
-}
-.ani{
-    width: 295px;  
-    font-size: 110%;
-    font-weight: bold;
-    margin: 20px;
+.dim-animaux {
+    width: 245px;
 }
 .filtres:hover {
     background-color: #0065fc;
     color: white;
 }
+.infos {
+    margin-left: 25px;
+    padding-top: 10px;
+}
 .icon {
-    width: 61px;
-    height: 61px;
+    width: 45px;
+    height: 45px;
     color:#0065fc;
     background-color: #deebff;
     margin: 0;
-    padding: 17px 7px 12px 5px;
+    padding: 12px 7px 12px 5px;
     border-radius: 50%;
     text-align: center;
 }
@@ -413,21 +418,15 @@ ul {
     color:#0065fc;
     border: solid 1px #f2f2f2;
     border-radius: 50%;
-    margin: 5px 5px 10px 65px;
+    margin: 5px 5px 10px 0;
     padding: 7px 5px 5px 12px;
 }
-.disponibles {
-    font-size: 100%;
+.txt-infos {
+    font-size: 95%;
 }
 /* Section Hébergements à Marseille + Les plus populaires */
 /* Hébergements à Marseille */
-#hebergements-marseille {
-    width: 60%;
-    margin: 0 0 0 25px;
-    padding: 5px 0 0 0;
-    border-radius: 10px;
-    background-color: #f2f2f2;
-}
+
 .titre {
     font-size: 20px;	
 	font-weight: bold;
@@ -436,7 +435,7 @@ ul {
     margin: 10px 0 10px 25px;
 }
 .photo-hm {
-    height: 60%;
+    height: 156px;
     border-radius: 10px 10px 0 0;
     object-fit: cover;    
 }
@@ -462,13 +461,6 @@ ul {
     font-size: 12px;
 }
 /* Les plus populaires */
-#les-plus-populaires-fond {
-    max-width: 600px;
-    height: 720px;
-    margin: 0 0 0 25px;
-    border-radius: 10px;
-    background-color: #f2f2f2;
-}
 .titre-les-plus-populaires {
 	font-size: 20px;
 	font-weight: bold;
@@ -497,7 +489,7 @@ ul {
     border: 5px solid transparent;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 7px 10px 10px 10px;
+    margin: 30px;
 }
 .flex-container-populaires-polaroid {
     display: flex;
@@ -519,12 +511,6 @@ ul {
 .boite-pop3 {
     width: 50%;
 	padding: 25px 0 0 0;
-}
-#lespluspopulaires {
-    height: 720px;
-    margin: 0 0 0 25px;
-    border-radius: 10px;
-    background-color: #f2f2f2;
 }
 .populaires {
     font-size: 140%;
@@ -556,13 +542,14 @@ ul {
 }
 .legend-photo-star-pop {
     text-align: left;
-    margin: 100px 0 0 15px;
+    margin: 130px 0 0 15px;
     font-size: 20px;
 }
 /***************************************/
 /* Section Activités à Marseille       */
 /***************************************/
 .titre-activites-marseille {
+    line-height: 45px;
     font-size: 140%;	
 	font-weight: bold;
     text-align: left;
@@ -572,29 +559,30 @@ ul {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+    margin: 0 25px 25px 25px;
 	padding: 0 4px;
 }
 .polaroid-activites-s {
-	height: 37%;
-	margin-top: 15px;
+	height: 190px;
+	margin: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .polaroid-activites-m {
-	height: 47%;
-	margin-top: 15px;
+	height: 253px;
+	margin: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .polaroid-activites-l {
-	height:57%;
-	margin-top: 15px;
+	height: 320px;
+	margin: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .polaroid-activites-xl {
-	height: 96%;
-	margin-top: 15px;
+	height: 530px;
+	margin: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
