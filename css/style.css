@@ -1,7 +1,7 @@
 /****************************************************/
 /* Fichier CSS Projet-02 OpenClassrooms BOOKI       */
 /*                                                  */
-/* 21/02/2022                                       */
+/* 23/02/2022                                       */
 /****************************************************/
 /*                                                  */
 /*     Média Queries                                */
@@ -38,21 +38,29 @@
 }
 /**********************************************************/
 /****** Navigation  menu version PC écran largeur > 992px */
-.navigation a:hover {
+.nav a:hover {
     color: #0065fc;
+}
+.nav:hover {
     border-top: 3px solid #0065fc;
+    border-bottom: 3px solid white;
 }
 /****** Navigation  menu version tablette écran largeur entre 768px et 992px */
 @media screen and (max-width: 992px) {
-.navigation a:hover {
+.nav a:hover {
     color: #deebff;
+}  
+.nav:hover {
     border-top: 3px solid #0065fc;
     border-bottom: 3px solid #0065fc;
 }
 }
 /*******  Navigation menu version mobile écran largeur < 768px */
 @media screen and (max-width: 768px) {
-.navigation a:hover {
+.nav a:hover {
+    color: #0065fc;
+}
+.nav:hover {
     color: #0065fc;
     border-top: 3px solid white;
     border-bottom: 3px solid #0065fc;
@@ -133,7 +141,7 @@
     background-color: #f2f2f2;
 }
 .polaroid-hebergements-marseille {
-    width: 28%;
+    width: 25%;
     height: 260px;
     background-color: white;
     border: 5px solid transparent;
@@ -143,9 +151,13 @@
 }
 /* bloc hebergement à Marseille version tablette écran largeur entre 768px et 992px */
 @media screen and (max-width: 992px){
+.cartes-hebergements-marseille {
+    display: flex;
+    flex-flow: row wrap;	
+}
 .flex-container-hebergements-populaires {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
 }   
 .hebergements-marseille {
     order: 2;
@@ -157,16 +169,12 @@
     width: 95%;
 	margin: 25px;
 }
-.cartes-hebergements-marseille {
-    display: flex;
-    flex-flow: column wrap;	
-}
 .polaroid-hebergements-marseille {
     width: 90%;
     height: 280px;
 }
 }
-/* bloc hebergements à Marseille version mobile écran largeur inferieure à 768px */
+/* bloc hebergement à Marseille version tablette écran < 768px */
 @media screen and (max-width: 768px){
 .flex-container-hebergements-populaires {
     display: flex;
@@ -174,57 +182,15 @@
 }
 .hebergements-marseille {
     order: 2;
-}
-.cartes-hebergements-marseille {
-    display: flex;
-    flex-flow: column wrap;	
-}
-.polaroid-hebergements-marseille {
-    width: 90%;	
+    width: 95%;
+    margin: 25px 5px 25px 5px;
 }
 .les-plus-populaires {
     order: 1;
+    width: 95%;
+    margin: 25px 5px 25px 5px;
 }
 }
-/*************************************************/
-/************ Activitées à Marseille   ***********/
-/* Création de 4 colonnes de même largeur */
-.colonne {
-	flex: 25%;
-	max-width: 25%;
-	padding: 0 15px;
-}
-/* Mode tablette  - 2 colonnes */
-@media screen and (max-width: 992px) {
-.colonne {
-    flex: 50%;
-    max-width: 50%;
-}
-}
-/* Mode mobile une colonnes */
-@media screen and (max-width: 768px) {
-.colonne {
-    flex: 100%;
-    max-width: 100%;
-}
-}
-/************************************************/
-/*** Footer mode 3 colonnes pour les écrans > 768px *****/
-.flex-container-footer {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #f2f2f2;  
-}
-/* Footer Mode mobile une colonnes */
-@media screen and (max-width: 768px) {
-.flex-container-footer {
-    flex-flow: column wrap;
-    align-items: start;
-}
-}
-/****** fin des Médias Queries   ********************/
 /****************************************************/
 /*  elements de base                                */
 /****************************************************/
@@ -234,6 +200,7 @@
     box-sizing: border-box;
 }
 /* Google font "Raleway" pour toute la page*/
+/***********  color de fond pour les # modes ******/
 body {
     font-family: "Raleway", sans-serif;
 }
@@ -243,7 +210,7 @@ h1 {
     margin: 12px 0 0 25px;
 }
 h2 {
-    font-size: 90%;
+    font-size: 110%;
     font-weight: bold;
     margin: 20px 0 0 25px;
 }
@@ -296,25 +263,30 @@ ul {
 }
 /* navigation */
 .navigation {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: end;
-    align-items: center;
-    align-content: center;
-    margin: 0 30px 0 0;
-    padding: 0;
+    width: 325px;
+    height: 135px;
+    margin: 0 40px 0 0;
 }
-.navigation a {
-    text-align: left;
-    padding: 35px 40px 35px 40px;
+.nav {
+    display: inline;
+    float: right;
+    padding: 40px 20px 40px 20px;
+    text-align: center;
     border-top: 3px solid white;
     border-bottom: 3px solid white;
+}
+.nav a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 /* section selections*/
 /* rechercher une ville */
 /* 1 icon + champ de saisie + bouton Rechercher */
 .zone-recherche { /* 1 */
-    width: 600px;
+    width: 330px;
     height: 45px;
     display:flex;
     flex-flow:row;
@@ -426,7 +398,6 @@ ul {
 }
 /* Section Hébergements à Marseille + Les plus populaires */
 /* Hébergements à Marseille */
-
 .titre {
     font-size: 20px;	
 	font-weight: bold;
@@ -606,6 +577,40 @@ ul {
     object-fit: cover;   
     border-radius: 10px 10px 0 0; 
 }
+/*************************************************/
+/************ Activitées à Marseille   ***********/
+/* Création de 4 colonnes de même largeur */
+.colonne {
+	flex: 25%;
+	max-width: 25%;
+	padding: 0 15px;
+}
+/* Mode tablette  - 2 colonnes */
+@media screen and (max-width: 992px) {
+.colonne {
+    flex: 50%;
+    max-width: 50%;
+}
+}
+/* Mode mobile activité à Maeqeille sur une colonnes */
+@media screen and (max-width: 768px) {
+.colonne {
+    flex: 100%;
+    max-width: 100%;
+}
+.polaroid-activites-s {
+	height: 280px;
+}
+.polaroid-activites-m {
+	height: 280px;
+}
+.polaroid-activites-l {
+	height: 280px;
+}
+.polaroid-activites-xl {
+	height: 280px;
+}
+}
 /**********/
 /* Footer */
 /**********/
@@ -615,6 +620,23 @@ ul {
     margin: 15px;
     padding: 0;
     text-align: left;
+}
+/********************************************************/
+/*** Footer mode 3 colonnes pour les écrans > 768px *****/
+.flex-container-footer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2f2f2;  
+}
+/* Footer une colonnes Mode mobile ecran < 768 px  */
+@media screen and (max-width: 768px) {
+.flex-container-footer {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: start;
+}
 }
 .lien-footer:hover {
     color:#0065fc;
