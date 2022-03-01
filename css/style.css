@@ -1,11 +1,7 @@
 /****************************************************/
 /* Fichier CSS Projet-02 OpenClassrooms BOOKI       */
 /*                                                  */
-/* 23/02/2022                                       */
-/****************************************************/
-/*                                                  */
-/*     Média Queries                                */
-/*                                                  */
+/* 01/03/2022                                       */
 /****************************************************/
 /*********** header mode ecran > 992px  *************/
 .flex-container-header {
@@ -105,7 +101,7 @@
     flex-flow: column nowrap;
 }
 .filtres {
-    margin: 12px 45px 12px 25px;
+    margin: 12px 5px 12px 25px;
 }
 }
 /***********************************************************************************/
@@ -147,7 +143,7 @@
     border: 5px solid transparent;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 28px;
+    margin: 20px 28px 28px 28px;
 }
 /* bloc hebergement à Marseille version tablette écran largeur entre 768px et 992px */
 @media screen and (max-width: 992px){
@@ -220,11 +216,11 @@ h3 {
     margin-left: 25px;
 }
 h4 {
-	font-size: 20px;	
+	font-size: 18px;	
 	font-weight: bold;
-	line-height: 75px;
+	line-height: 40px;
     text-align: left;
-    margin: 10px 0 10px 25px;
+    margin: 10px 0 0 25px;
 }
 p {
     font-size: 100%;
@@ -312,7 +308,7 @@ ul {
 }
 .saisie-ville {
     width: 200px;
-    height: 100%;
+    height: 45px;
     font-size: 100%;
     font-weight: bold;
     text-indent: 12px;
@@ -403,7 +399,7 @@ ul {
 	font-weight: bold;
 	line-height: 75px;
     text-align: left;
-    margin: 10px 0 10px 25px;
+    margin: 0 0 10px 25px;
 }
 .photo-hm {
     height: 156px;
@@ -436,7 +432,7 @@ ul {
 	font-size: 20px;
 	font-weight: bold;
 	text-align: left;
-    margin: 10px 0 10px 15px;
+    margin: 0 0 0 15px;
     padding: 0;
 }
 .icon-courbe{
@@ -455,12 +451,12 @@ ul {
 }
 .polaroid-populaires {
     width: 90%;
-    height: 250px;
+    height: 180px;
     background-color: white;
     border: 5px solid transparent;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 30px;
+    margin: 0 30px 30px 30px;
 }
 .flex-container-populaires-polaroid {
     display: flex;
@@ -477,11 +473,11 @@ ul {
 }
 .boite-pop2 {
     width: 53%;
-    height: 240px;
+    height: 170px;
 }
 .boite-pop3 {
     width: 50%;
-	padding: 25px 0 0 0;
+	padding: 12px 0 0 0;
 }
 .populaires {
     font-size: 140%;
@@ -513,7 +509,7 @@ ul {
 }
 .legend-photo-star-pop {
     text-align: left;
-    margin: 130px 0 0 15px;
+    margin: 50px 0 0 15px;
     font-size: 20px;
 }
 /***************************************/
