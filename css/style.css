@@ -1,7 +1,7 @@
 /****************************************************/
 /* Fichier CSS Projet-02 OpenClassrooms BOOKI       */
 /*                                                  */
-/* 01/03/2022                                       */
+/* 08/03/2022                                       */
 /****************************************************/
 /*********** header mode ecran > 992px  *************/
 .flex-container-header {
@@ -137,13 +137,13 @@
     background-color: #f2f2f2;
 }
 .polaroid-hebergements-marseille {
-    width: 25%;
+    width: 28%;
     height: 260px;
     background-color: white;
     border: 5px solid transparent;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 20px 28px 28px 28px;
+    margin: 18px 20px 24px 20px;
 }
 /* bloc hebergement à Marseille version tablette écran largeur entre 768px et 992px */
 @media screen and (max-width: 992px){
@@ -213,14 +213,14 @@ h2 {
 h3 {
     font-size: 85%;
     font-weight: bold;
-    margin-left: 25px;
+    margin: 25px;
 }
 h4 {
 	font-size: 18px;	
 	font-weight: bold;
 	line-height: 40px;
     text-align: left;
-    margin: 10px 0 0 25px;
+    margin: 10px 0 0 0;
 }
 p {
     font-size: 100%;
@@ -399,7 +399,7 @@ ul {
 	font-weight: bold;
 	line-height: 75px;
     text-align: left;
-    margin: 0 0 10px 25px;
+    margin: 30px 0 0 25px;
 }
 .photo-hm {
     height: 156px;
@@ -432,14 +432,14 @@ ul {
 	font-size: 20px;
 	font-weight: bold;
 	text-align: left;
-    margin: 0 0 0 15px;
+    margin: 15px 0 0 15px;
     padding: 0;
 }
 .icon-courbe{
     float: right;
     font-size: 24px;
-    color: grey;
-    margin: 25px 15px 0 0;
+    color: black;
+    margin: 25px 35px 0 0;
 }
 .flex-container-populaires-3c {
     display: flex;
@@ -509,7 +509,7 @@ ul {
 }
 .legend-photo-star-pop {
     text-align: left;
-    margin: 50px 0 0 15px;
+    margin: 70px 0 0 15px;
     font-size: 20px;
 }
 /***************************************/
@@ -520,36 +520,36 @@ ul {
     font-size: 140%;	
 	font-weight: bold;
     text-align: left;
-    margin: 10px 0 10px 25px;
+    margin: 30px 0 10px 25px;
 }
 .activites-a-marseille {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-    margin: 0 25px 25px 25px;
-	padding: 0 4px;
+    margin: 0;
+	padding: 0;
 }
 .polaroid-activites-s {
 	height: 190px;
-	margin: 20px;
+	margin: 20px 15px 20px 25px;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .polaroid-activites-m {
 	height: 253px;
-	margin: 20px;
+	margin: 20px 15px 20px 25px;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .polaroid-activites-l {
 	height: 320px;
-	margin: 20px;
+	margin: 20px 15px 20px 25px;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .polaroid-activites-xl {
 	height: 530px;
-	margin: 20px;
+	margin: 20px 15px 20px 25px;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -579,7 +579,7 @@ ul {
 .colonne {
 	flex: 25%;
 	max-width: 25%;
-	padding: 0 15px;
+	padding: 0 15px 0 0;
 }
 /* Mode tablette  - 2 colonnes */
 @media screen and (max-width: 992px) {
@@ -612,7 +612,7 @@ ul {
 /**********/
 .flex-container-footer > div {
 	width: 280px;
-	height: 200px;
+	height: 150px;
     margin: 15px;
     padding: 0;
     text-align: left;
@@ -624,14 +624,15 @@ ul {
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
-    background-color: #f2f2f2;  
+    background-color: #f2f2f2;
+    margin-top: 60px; 
 }
 /* Footer une colonnes Mode mobile ecran < 768 px  */
 @media screen and (max-width: 768px) {
 .flex-container-footer {
     display: flex;
     flex-flow: column wrap;
-    align-items: start;
+    align-items: flex-start;
 }
 }
 .lien-footer:hover {
